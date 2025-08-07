@@ -1,0 +1,14 @@
+:root {
+
+    /*Colors*/
+    --green-color: #00cc22;
+    --light-gray-color: #e6e6e6;
+    --pastel-green-light-color: #d9f2dd;
+    
+    /*Background colors*/
+    --white-background: #ffffff;
+
+    /*Text colors*/
+    --primary-text: #212121;
+    --secondary-text: #737373;
+}

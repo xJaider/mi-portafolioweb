@@ -1,0 +1,239 @@
+---
+import CatAvatar from "../assets/images/cat-avatar.jpg";
+
+const navigation = [
+    { name: "inicio", href: "#home" },
+    { name: "sobre mí", href: "#about" },
+    { name: "proyectos", href: "#projects" },
+    { name: "contacto", href: "#contact" },
+];
+---
+
+<header class="header">
+    <div class="header__container">
+        <!-- Logo y nombre -->
+        <div class="header__logo">
+            <img
+                src={CatAvatar.src}
+                alt="Avatar de Jaider Sanchez"
+                class="header__avatar"
+                width="32"
+                height="32"
+            />
+            <span class="header__name">Jaider Sanchez</span>
+        </div>
+
+        <!-- Navegación -->
+        <nav class="header__nav" id="navLinks">
+            <ul class="nav__list">
+                {
+                    navigation.map((item, index) => (
+                        <li class="nav__item">
+                            <a href={item.href} class="nav__link">
+                                <span class="nav__number" aria-hidden="true">
+                                    0{index + 1}
+                                </span>
+                                <span class="nav__text">{item.name}</span>
+                            </a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </nav>
+
+        <!-- Botón hamburguesa -->
+        <button class="header__hamburger" id="hamburger">
+            <svg
+                id="hamburger-icon"
+                class="hamburger__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+            >
+                <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"></path>
+            </svg>
+
+            <svg
+                id="close-icon"
+                class="hamburger__icon hamburger__icon--hidden"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+            >
+                <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M18 6L6 18M6 6l12 12"></path>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<style>
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        background: var(--white-background);
+        backdrop-filter: blur(4px);
+        border-bottom: 1px solid var(--light-gray-color);
+    }
+
+    .header__container {
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 4rem;
+    }
+
+    .header__logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header__avatar {
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .header__name {
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--primary-text);
+    }
+
+    .nav__list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 1rem;
+    }
+
+    .nav__link {
+        display: flex;
+        align-items: baseline;
+        gap: 0.25rem;
+        font-size: 14px;
+        color: var(--secondary-text);
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .nav__link:hover {
+        color: var(--primary-text);
+        outline: none;
+    }
+
+    .nav__number {
+        color: var(--green-color);
+        font-weight: 500;
+        font-size: 0.9rem;
+    }
+
+    /* Botón hamburguesa */
+    .header__hamburger {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+        border-radius: 15%;
+        transition: all 0.3s ease;
+        color: currentColor;
+    }
+
+    .header__hamburger:hover,
+    .header__hamburger:focus-visible {
+        color: #ffffff;
+        background: var(--green-color);
+    }
+
+    .hamburger__icon {
+        display: block;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    .hamburger__icon--hidden {
+        display: none;
+    }
+
+    /* Estados activos para navegación móvil */
+    .header__nav--active {
+        display: flex;
+    }
+
+    @media (max-width: 1024px) {
+        .header__container {
+            padding: 0 2rem;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .header__container {
+            padding: 0 1.5rem;
+        }
+
+        .header__hamburger {
+            display: block;
+        }
+
+        .header__nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--white-background);
+            border-top: 1px solid var(--light-gray-color);
+            border-bottom: 1px solid var(--light-gray-color);
+            padding: 0 1.5rem;
+        }
+
+        .header__nav--active {
+            display: block;
+        }
+
+        .nav__list {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .nav__item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav__item:last-child {
+            border-bottom: none;
+        }
+
+        .nav__link {
+            display: flex;
+            padding: 0.75rem 0;
+            width: 100%;
+        }
+    }
+</style>
+
+<script src="../lib/hamburgers.js"></script>
