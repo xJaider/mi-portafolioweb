@@ -1,0 +1,188 @@
+---
+const { title, years, organization, description } = Astro.props;
+---
+
+<div class="contenedor">
+    <div class="tarjeta">
+        <div class="tarjeta__cabecera">
+            <h4>{title}</h4>
+            <span>{years}</span>
+        </div>
+        <p class="tarjeta__organizacion">{organization}</p>
+        <p class="tarjeta__descripcion">{description}</p>
+    </div>
+</div>
+<style>
+    .tarjeta {
+        background: var(--white-background);
+        border: 1px solid var(--light-grey-color);
+        padding: 2rem;
+        border-radius: 10px;
+    }
+
+    .tarjeta__cabecera {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 12px;
+    }
+
+    .tarjeta__cabecera h4 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .tarjeta__cabecera span {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--green-color);
+    }
+
+    .tarjeta p {
+        margin: 0;
+        text-align: justify;
+    }
+
+    .tarjeta__organizacion {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--secondary-text);
+        padding-bottom: 12px;
+    }
+
+    .tarjeta__descripcion {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--secondary-text);
+    }
+
+    /* Mobile - 480px y menos */
+    @media (max-width: 480px) {
+        .tarjeta {
+            padding: 1.2rem;
+            border-radius: 8px;
+        }
+
+        .tarjeta__cabecera {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            padding-bottom: 10px;
+        }
+
+        .tarjeta__cabecera h4 {
+            font-size: 16px;
+        }
+
+        .tarjeta__cabecera span {
+            font-size: 13px;
+        }
+
+        .tarjeta__organizacion {
+            font-size: 14px;
+            padding-bottom: 10px;
+        }
+
+        .tarjeta__descripcion {
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .tarjeta p {
+            text-align: left;
+        }
+    }
+
+    /* Tablet - 768px y menos */
+    @media (max-width: 768px) {
+        .tarjeta {
+            padding: 1.5rem;
+        }
+
+        .tarjeta__cabecera {
+            padding-bottom: 11px;
+        }
+
+        .tarjeta__cabecera h4 {
+            font-size: 17px;
+        }
+
+        .tarjeta__organizacion {
+            font-size: 15px;
+            padding-bottom: 11px;
+        }
+
+        .tarjeta__descripcion {
+            font-size: 13.5px;
+        }
+    }
+
+    /* Tablet grande - 1024px y menos */
+    @media (max-width: 1024px) {
+        .tarjeta {
+            padding: 1.8rem;
+        }
+
+        .tarjeta__cabecera h4 {
+            font-size: 17.5px;
+        }
+
+        .tarjeta__organizacion {
+            font-size: 15.5px;
+        }
+    }
+
+    /* Desktop medio - Entre 1025px y 1300px */
+    @media (min-width: 1025px) and (max-width: 1300px) {
+        .tarjeta {
+            padding: 2rem;
+        }
+
+        .tarjeta__cabecera h4 {
+            font-size: 18px;
+        }
+
+        .tarjeta__cabecera span {
+            font-size: 14px;
+        }
+
+        .tarjeta__organizacion {
+            font-size: 16px;
+        }
+
+        .tarjeta__descripcion {
+            font-size: 14px;
+        }
+    }
+
+    /* Desktop grande - 1301px y más */
+    @media (min-width: 1301px) {
+        .tarjeta {
+            padding: 2.2rem;
+            border-radius: 12px;
+        }
+
+        .tarjeta__cabecera {
+            padding-bottom: 14px;
+        }
+
+        .tarjeta__cabecera h4 {
+            font-size: 19px;
+        }
+
+        .tarjeta__cabecera span {
+            font-size: 15px;
+        }
+
+        .tarjeta__organizacion {
+            font-size: 17px;
+            padding-bottom: 14px;
+        }
+
+        .tarjeta__descripcion {
+            font-size: 15px;
+            line-height: 1.5;
+        }
+    }
+</style>
