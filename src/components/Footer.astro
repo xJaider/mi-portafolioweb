@@ -1,0 +1,53 @@
+---
+
+---
+
+<footer class="footer">
+    <div class="footer-left">
+        <p>© 2025 Jaider Sanchez. Todos los derechos reservados.</p>
+    </div>
+    <div class="footer-right">
+        <p>
+            Hecho con <span class="tech">Astro</span> y <span class="heart"
+                >❤️</span
+            >
+        </p>
+    </div>
+</footer>
+
+<style>
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 3rem;
+        background-color: #fff;
+        color: #4a5568;
+        font-size: 0.875rem;
+        border-top: 1px solid #e2e8f0;
+        gap: 0.5rem;
+    }
+
+    .footer-left,
+    .footer-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .tech {
+        font-weight: 600;
+    }
+
+    .heart {
+        color: red;
+    }
+
+    /* Móvil */
+    @media (max-width: 640px) {
+        .footer {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+</style>

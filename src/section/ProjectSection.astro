@@ -1,6 +1,8 @@
 ---
 import ProjectCard from "../components/ProjectCard.astro";
-import ImageUnsplash from "/src/assets/images/image-unsplash.jpg";
+import ImageProject1 from "/src/assets/images/image-unsplash.jpg";
+import ImageProject2 from "../assets/images/sobusa.jpg"
+import ImageProject3 from "../assets/images/ctrlReview.webp"
 ---
 
 <section id="projects" class="section">
@@ -12,7 +14,7 @@ import ImageUnsplash from "/src/assets/images/image-unsplash.jpg";
             </div>
             <div class="project__card">
                 <ProjectCard
-                    image={ImageUnsplash}
+                    image={ImageProject1}
                     tag="Proyecto_personal"
                     title="Mi portafolio web"
                     state="En_desarrollo"
@@ -20,7 +22,7 @@ import ImageUnsplash from "/src/assets/images/image-unsplash.jpg";
                     tecnologies={["HTML/CSS", "JavaScript", "Astro", "Vercel"]}
                 />
                 <ProjectCard
-                    image={ImageUnsplash}
+                    image={ImageProject2}
                     tag="Proyecto_académico"
                     title="TuBus (Prototipo)"
                     state="Completado"
@@ -34,17 +36,17 @@ import ImageUnsplash from "/src/assets/images/image-unsplash.jpg";
                     ]}
                 />
                 <ProjectCard
-                    image={ImageUnsplash}
+                    image={ImageProject3}
                     tag="Proyecto_académico"
                     title="Pagina web Ctrl+Review"
-                    state="En_desarrollo"
+                    state="Completado"
                     description="Un sistema web que permite buscar, crear y gestionar reseñas de manera intuitiva. Diseñado para cualquier persona que quiera compartir experiencias o explorar opiniones sobre diversos temas, este proyecto combina funcionalidad y diseño para ofrecer una experiencia organizada y accesible."
                     tecnologies={["Gatsby", "GraphQL", "CSS"]}
                 />
             </div>
             <div class="project__buttons">
                 <a
-                    href="https://espaciodejaider.notion.site/Mi-portafolio-personal-195eb011248e8050b7bafef25c445cce"
+                    href="http://github.com/xJaider"
                     class="btn-icon github"
                 >
                     <svg
@@ -87,7 +89,7 @@ import ImageUnsplash from "/src/assets/images/image-unsplash.jpg";
                 </a>
 
                 <a
-                    href="https://espaciodejaider.notion.site/Mi-portafolio-personal-195eb011248e8050b7bafef25c445cce"
+                    href="https://espaciodejaider.notion.site/Portafolio-de-Jaider-257eb011248e804f81b9d82a3a79e37e?source=copy_link"
                     class="btn-icon notion"
                 >
                     <svg
@@ -110,7 +112,7 @@ import ImageUnsplash from "/src/assets/images/image-unsplash.jpg";
 
 <style>
     .section {
-        height: 100vh;
+        height: auto;
         padding: 5rem 2rem 2rem 2rem;
     }
 
@@ -191,5 +193,99 @@ import ImageUnsplash from "/src/assets/images/image-unsplash.jpg";
     .btn-icon:hover path {
         color: var(--green-color);
         fill: var(--green-color);
+    }
+
+    /* Estilos base (desktop-first en tu caso) */
+    /* Ya tienes tu layout principal, así que mantenemos lo existente */
+
+    /* ≤ 1300px pero ≥ 1025px */
+    @media (max-width: 1300px) and (min-width: 1025px) {
+        .section {
+            padding: 4rem 2rem;
+        }
+
+        .project__label h1 {
+            font-size: 42px;
+        }
+
+        .project__label span {
+            font-size: 18px;
+        }
+    }
+
+    /* ≤ 1024px (tablets grandes) */
+    @media (max-width: 1024px) {
+        .section {
+            padding: 3rem 1.5rem;
+            height: auto;
+        }
+
+        .project__label h1 {
+            font-size: 36px;
+        }
+
+        .project__label span {
+            font-size: 18px;
+            text-align: left;
+        }
+
+        .project__card {
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+    }
+
+    /* ≤ 768px (tablets pequeñas y phablets) */
+    @media (max-width: 768px) {
+        .project__label {
+            margin-bottom: 2rem;
+        }
+
+        .project__label h1 {
+            font-size: 30px;
+        }
+
+        .project__label span {
+            font-size: 16px;
+        }
+
+        .project__buttons {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .btn-icon {
+            justify-content: center;
+        }
+    }
+
+    /* ≤ 480px (móviles) */
+    @media (max-width: 480px) {
+        .section {
+            padding: 2rem 1rem;
+        }
+
+        .project__label h1 {
+            font-size: 26px;
+            text-align: center;
+        }
+
+        .project__label span {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .project__card {
+            grid-template-columns: 1fr;
+        }
+
+        .project__buttons {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .btn-icon {
+            font-size: 0.9rem;
+            padding: 10px 12px;
+        }
     }
 </style>

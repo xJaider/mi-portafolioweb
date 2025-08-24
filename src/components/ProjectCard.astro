@@ -7,14 +7,22 @@ const { image, tag, title, state, description, tecnologies } = Astro.props;
 <div class="tarjeta">
     <div class="tarjeta__imagen">
         <!-- {tag && <span class="tarjeta__etiqueta">{tag}</span>} -->
-        {tag && <span class={`tarjeta__etiqueta ${tag.toLowerCase()}`}>{tag.replace("_"," ")}</span>}
+        {
+            tag && (
+                <span class={`tarjeta__etiqueta ${tag.toLowerCase()}`}>
+                    {tag.replace("_", " ")}
+                </span>
+            )
+        }
         <!-- <img src={image} alt={title} /> -->
         <Image src={image} alt={title} />
     </div>
     <div class="tarjeta__contenido">
         <div class="tarjeta__label">
             <h3>{title}</h3>
-            <span class={`estado ${state.toLowerCase()}`}>{state.replace("_"," ")}</span>
+            <span class={`estado ${state.toLowerCase()}`}
+                >{state.replace("_", " ")}</span
+            >
         </div>
         <p>{description}</p>
         <div class="tarjeta__tecnologias">
@@ -36,11 +44,11 @@ const { image, tag, title, state, description, tecnologies } = Astro.props;
         display: flex;
         flex-direction: column;
         border: 1px solid var(--light-grey-color);
-        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     }
 
     .tarjeta__imagen {
-        position: relative; 
+        position: relative;
         width: 100%;
         height: 200px;
         overflow: hidden;
@@ -66,8 +74,12 @@ const { image, tag, title, state, description, tecnologies } = Astro.props;
         pointer-events: none;
     }
 
-    .tarjeta__etiqueta.proyecto_personal { background-color: var(--green-color); }
-    .tarjeta__etiqueta.proyecto_académico { background-color: orangered; }
+    .tarjeta__etiqueta.proyecto_personal {
+        background-color: var(--green-color);
+    }
+    .tarjeta__etiqueta.proyecto_académico {
+        background-color: orangered;
+    }
 
     .tarjeta__contenido {
         padding: 1rem 1.25rem;
@@ -100,12 +112,16 @@ const { image, tag, title, state, description, tecnologies } = Astro.props;
         text-transform: capitalize;
     }
 
-    .estado.completado { background-color: var(--green-color); }
-    .estado.en_desarrollo { background-color: var(--light-grey-color); color: var(--primary-color); }
+    .estado.completado {
+        background-color: var(--green-color);
+    }
+    .estado.en_desarrollo {
+        background-color: var(--light-grey-color);
+        color: var(--primary-color);
+    }
 
     p {
         text-align: justify;
-        height: 125px;
         margin: 0;
         font-size: 0.95rem;
         color: #555;
@@ -126,5 +142,80 @@ const { image, tag, title, state, description, tecnologies } = Astro.props;
         border-radius: 6px;
         font-size: 0.8rem;
         font-weight: 500;
+    }
+
+    /* Entre 1025px y 1300px */
+    @media (max-width: 1300px) and (min-width: 1025px) {
+        .tarjeta {
+            height: 480px;
+        }
+        .tarjeta__label h3 {
+            font-size: 1.2rem;
+        }
+        p {
+            font-size: 0.92rem;
+        }
+    }
+
+    /* ≤ 1024px (tablets grandes) */
+    @media (max-width: 1024px) {
+        .tarjeta {
+            height: auto;
+        }
+        .tarjeta__imagen {
+            height: 180px;
+        }
+        .tarjeta__label h3 {
+            font-size: 1.15rem;
+        }
+        p {
+            height: auto;
+            font-size: 0.9rem;
+        }
+    }
+
+    /* ≤ 768px (tablets pequeñas y phablets) */
+    @media (max-width: 768px) {
+        .tarjeta__imagen {
+            height: 170px;
+        }
+        .tarjeta__label {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.25rem;
+        }
+        .tarjeta__label h3 {
+            font-size: 1.05rem;
+        }
+        .estado {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+        }
+        p {
+            font-size: 0.88rem;
+        }
+    }
+
+    /* ≤ 480px (móviles) */
+    @media (max-width: 480px) {
+        .tarjeta {
+            height: auto;
+        }
+        .tarjeta__imagen {
+            height: 160px;
+        }
+        .tarjeta__label h3 {
+            font-size: 1rem;
+        }
+        p {
+            font-size: 0.85rem;
+        }
+        .tarjeta__tecnologias {
+            gap: 0.4rem;
+        }
+        .tarjeta__item {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+        }
     }
 </style>
