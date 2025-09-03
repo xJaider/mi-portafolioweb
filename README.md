@@ -1,46 +1,41 @@
-# Astro Starter Kit: Basics
+# 🌐 Portafolio Web - [Tu Nombre]
 
-```sh
-npm create astro@latest -- --template basics
-```
+¡Hola! 👋 Gracias por visitar mi portafolio web. Aquí encontrarás una selección de mis proyectos, conocimientos y experiencias como desarrollador frontend. Este sitio fue creado utilizando tecnologías modernas como HTML, CSS, JavaScript y Astro, con el propósito de mostrar mi enfoque en la creación de interfaces funcionales, accesibles y visualmente atractivas.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Explora, curiosea y si algo te llama la atención, ¡no dudes en contactarme!
 
-## 🚀 Project Structure
+## 🚀 Tecnologías utilizadas
 
-Inside of your Astro project, you'll see the following folders and files:
+- HTML5
+- CSS3
+- JavaScript ES6+
+- Framework: Astro.js
+- Otras herramientas: Git, GitHub, Vercel
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## 📁 Estructura del proyecto
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+📦 portafolio-web/ 
+┣ 📂 public/ # Archivos estáticos (favicon, index.html, etc.) 
+┣ 📂 src/ # Código fuente principal 
+┃ ┣ 📂 assets/ # Recursos como imágenes 
+┃ ┃ ┗ 📂 images/ 
+┃ ┣ 📂 components/ # Componentes reutilizables 
+┃ ┣ 📂 doc/ # Documentación interna 
+┃ ┣ 📂 layouts/ # Estructuras base de las páginas 
+┃ ┣ 📂 lib/ # Funciones y utilidades 
+┃ ┣ 📂 pages/ # Páginas principales del sitio 
+┃ ┣ 📂 section/ # Secciones específicas del portafolio 
+┃ ┗ 📜 index.css # Estilos globales 
+┗ 📜 README.md # Este archivo
 
-## 🧞 Commands
+## 📸 Vista previa
 
-All commands are run from the root of the project, from a terminal:
+Puedes ver el sitio en vivo aquí 👉 [https://tuusuario.github.io/portafolio-web]
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 📬 Contacto
 
-## 👀 Want to learn more?
+- 📧 Email: [sanchezj0294@gmail.com]
+- 💼 LinkedIn: [linkedin.com/in/jaider-sanchez]
+- 🐙 GitHub: [github.com/xJaider]
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
