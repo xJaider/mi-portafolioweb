@@ -15,22 +15,22 @@ Explora, curiosea y si algo te llama la atención, ¡no dudes en contactarme!
 ## 📁 Estructura del proyecto
 
 📦 portafolio-web/ 
-┣ 📂 public/ # Archivos estáticos (favicon, index.html, etc.) 
-┣ 📂 src/ # Código fuente principal 
-┃ ┣ 📂 assets/ # Recursos como imágenes 
-┃ ┃ ┗ 📂 images/ 
-┃ ┣ 📂 components/ # Componentes reutilizables 
-┃ ┣ 📂 doc/ # Documentación interna 
-┃ ┣ 📂 layouts/ # Estructuras base de las páginas 
-┃ ┣ 📂 lib/ # Funciones y utilidades 
-┃ ┣ 📂 pages/ # Páginas principales del sitio 
-┃ ┣ 📂 section/ # Secciones específicas del portafolio 
-┃ ┗ 📜 index.css # Estilos globales 
+┣ 📂 public/ # Archivos estáticos (favicon, index.html, etc.)
+┣ 📂 src/ # Código fuente principal
+┃ ┣ 📂 assets/ # Recursos como imágenes
+┃ ┃ ┗ 📂 images/
+┃ ┣ 📂 components/ # Componentes reutilizables
+┃ ┣ 📂 doc/ # Documentación interna
+┃ ┣ 📂 layouts/ # Estructuras base de las páginas
+┃ ┣ 📂 lib/ # Funciones y utilidades
+┃ ┣ 📂 pages/ # Páginas principales del sitio
+┃ ┣ 📂 section/ # Secciones específicas del portafolio
+┃ ┗ 📜 index.css # Estilos globales
 ┗ 📜 README.md # Este archivo
 
 ## 📸 Vista previa
 
-Puedes ver el sitio en vivo aquí 👉 [https://tuusuario.github.io/portafolio-web]
+Puedes ver el sitio en vivo aquí 👉 [https://el-portafolio-de-jaider.vercel.app/]
 
 ## 📬 Contacto
 
