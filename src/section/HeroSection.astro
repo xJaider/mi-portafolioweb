@@ -1,5 +1,5 @@
 ---
-
+import DescargarCV from "../doc/Ejemplo-de-descarga-pdf.pdf";
 ---
 
 <section id="home" class="section">
@@ -14,14 +14,16 @@
             </h1>
             <div class="hero__description">
                 <p>
-                    Soy un desarrollador backend en formación, enfocado en crear
-                    soluciones eficientes mientras estudio Ingeniería de
-                    Sistemas y aprendo tecnologías actuales.
+                    Soy un desarrollador backend en formación, con enfoque en construir soluciones eficientes y escalables. Estudiante de Ingeniería de Sistemas y en constante aprendizaje de tecnologías modernas.
                 </p>
             </div>
             <div class="hero__actions">
-                <button class="btn-primary">Ver mis proyectos</button>
-                <button class="btn-secondary">Contactar</button>
+                <a href="#projects">
+                    <button class="btn-primary">Ver mis proyectos</button>
+                </a>
+                <a href={DescargarCV} download="pdf-ejemplo.pdf">
+                    <button class="btn-secondary">Descargar CV</button>
+                </a>
             </div>
         </div>
     </div>

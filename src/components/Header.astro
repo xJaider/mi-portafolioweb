@@ -1,5 +1,6 @@
 ---
-import CatAvatar from "../assets/images/cat-avatar.jpg";
+import Avatar from "../assets/images/avatar.jpg";
+import Image from "astro/components/Image.astro";
 
 const navigation = [
     { name: "inicio", href: "#home" },
@@ -13,12 +14,10 @@ const navigation = [
     <div class="header__container">
         <!-- Logo y nombre -->
         <div class="header__logo">
-            <img
-                src={CatAvatar.src}
+            <Image
+                src={Avatar}
                 alt="Avatar de Jaider Sanchez"
                 class="header__avatar"
-                width="32"
-                height="32"
             />
             <span class="header__name">Jaider Sanchez</span>
         </div>
@@ -113,6 +112,8 @@ const navigation = [
     .header__avatar {
         border-radius: 50%;
         object-fit: cover;
+        width: 32px;
+        height: 32px;
     }
 
     .header__name {
